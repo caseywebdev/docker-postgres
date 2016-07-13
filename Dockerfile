@@ -13,4 +13,4 @@ COPY etc/containerpilot.json /etc/
 ARG VERSION
 ENV VERSION $VERSION
 
-ENTRYPOINT ["containerpilot", "/docker-entrypoint.sh"]
+CMD ["containerpilot", "/docker-entrypoint.sh", "postgres"]
