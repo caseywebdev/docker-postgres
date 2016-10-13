@@ -1,7 +1,7 @@
-FROM postgres:9.5.3
+FROM postgres:9.6.0
 
 ENV CONTAINERPILOT file:///etc/containerpilot.json
-ENV CONTAINERPILOT_VERSION 2.3.0
+ENV CONTAINERPILOT_VERSION 2.4.3
 RUN apt-get update && \
     apt-get install -y wget && \
     wget -O - \
@@ -9,6 +9,8 @@ RUN apt-get update && \
       tar xz -C /bin/
 
 COPY etc/containerpilot.json /etc/
+
+ENV CONSUL_URL consul
 
 ARG VERSION
 ENV VERSION $VERSION
