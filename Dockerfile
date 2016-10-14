@@ -10,7 +10,7 @@ RUN apt-get update && \
 
 COPY etc/containerpilot.json /etc/
 
-ENV CONSUL_URL consul
+ENV CONSUL_URL consul-http
 
 ARG VERSION
 ENV VERSION $VERSION
