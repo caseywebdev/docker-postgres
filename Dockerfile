@@ -1,7 +1,7 @@
-FROM postgres:9.6.0
+FROM postgres:9.6.1
 
 ENV CONTAINERPILOT file:///etc/containerpilot.json
-ENV CONTAINERPILOT_VERSION 2.4.3
+ENV CONTAINERPILOT_VERSION 2.6.0
 RUN apt-get update && \
     apt-get install -y wget && \
     wget -O - \

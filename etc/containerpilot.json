@@ -5,7 +5,8 @@
       "name": "postgres",
       "port": 5432,
       "poll": 10,
-      "ttl": 30
+      "ttl": 30,
+      "consul": {"deregisterCriticalServiceAfter": "90m"}
     }
   ]
 }
